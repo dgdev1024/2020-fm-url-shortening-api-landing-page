@@ -1,0 +1,88 @@
+@import "../../global.scss";
+
+.footer {
+  background-color: $color-very-dark-violet;
+  color: $color-white;
+
+  &__container {
+    padding: 32px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @media #{$screen-medium} {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    @include scale-logo-width(32px);
+    margin: 32px 0px;
+
+    @media #{$screen-medium} {
+      margin: 0px;
+    }
+  }
+
+  &__logo-svg .logo-svg__path {
+    fill: $color-white;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 32px 0px;
+
+    @media #{$screen-medium} {
+      align-items: flex-start;
+      margin: 0px;
+    }
+  }
+
+  &__link {
+    margin: 4px 0px;
+    color: $color-white;
+
+    &:hover {
+      color: $color-cyan;
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social-link {
+    display: inline-block;
+    margin: 0px 16px;
+
+    @media #{$screen-medium} {
+      margin: 0px 4px;
+    }
+
+    @media #{$screen-large} {
+      margin: 0px 8px;
+    }
+
+    &--facebook:hover .svg__path {
+      fill: $color-facebook-blue;
+    }
+
+    &--twitter:hover .svg__path {
+      fill: $color-twitter-blue;
+    }
+
+    &--pinterest:hover .svg__path {
+      fill: $color-pinterest-red;
+    }
+
+    &--instagram:hover .svg__path {
+      fill: $color-instagram-orange;
+    }
+  }
+}
