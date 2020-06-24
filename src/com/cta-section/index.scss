@@ -1,0 +1,25 @@
+@import "../../global.scss";
+
+.cta {
+  background-color: $color-dark-violet;
+  background-image: url("../../img/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+
+  @media #{$screen-medium} {
+    background-image: url("../../img/bg-boost-desktop.svg");
+  }
+
+  &__container {
+    padding: 48px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__heading {
+    color: $color-white !important;
+  }
+}

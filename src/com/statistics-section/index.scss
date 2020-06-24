@@ -1,0 +1,96 @@
+@import "../../global.scss";
+
+.statistics {
+  background-color: $color-background-two-light;
+
+  &__container {
+    padding: 64px 0px;
+  }
+
+  &__heading,
+  &__text {
+    max-width: 480px;
+    margin: 0px auto;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px;
+    padding-top: 72px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: calc(50% - 4px);
+      width: 8px;
+      height: 60%;
+      background-color: $color-cyan;
+      z-index: -1;
+
+      @media #{$screen-medium} {
+        top: calc(50% - 4px);
+        left: 20%;
+        width: 60%;
+        height: 8px;
+      }
+    }
+
+    @media #{$screen-medium} {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      height: 400px;
+      align-items: stretch;
+    }
+
+    @media #{$screen-large} {
+      align-items: center;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    background-color: $color-background-one-light;
+    border-radius: 8px;
+
+    @media #{$screen-medium} {
+      align-items: flex-start;
+    }
+
+    @media #{$screen-large} {
+      &:first-child {
+        align-self: start;
+      }
+
+      &:last-child {
+        align-self: end;
+      }
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin-top: -70px;
+    margin-bottom: 32px;
+    background-color: $color-dark-violet;
+    border-radius: 50%;
+  }
+}
+
+.main--dark .statistics {
+  background-color: $color-background-two-dark;
+
+  &__card {
+    background-color: $color-background-one-dark;
+  }
+}

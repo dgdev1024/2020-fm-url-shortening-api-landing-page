@@ -10,11 +10,12 @@ $font-weight-bold: 700;
 
 // Media Query Variables
 $screen-small: "(min-width: 600px)";
-$screen-medium: "(min-width: 900px)";
-$screen-large: "(min-width: 1200px)";
+$screen-medium: "(min-width: 800px)";
+$screen-large: "(min-width: 1000px)";
 
 // Global Color Variables
 $color-cyan: hsl(180, 66%, 49%);
+$color-cyan-hover: hsl(180, 66%, 60%);
 $color-dark-violet: hsl(257, 27%, 26%);
 $color-red: hsl(0, 87%, 67%);
 $color-gray: hsl(0, 0%, 75%);
@@ -25,15 +26,15 @@ $color-white: hsl(0, 0%, 100%);
 
 // Light Mode Color Variables
 $color-heading-light: hsl(260, 8%, 14%);
-$color-text-light: hsl(257, 7%, 63%);
+$color-text-light: hsl(257, 7%, 50%);
 $color-background-one-light: hsl(0, 0%, 100%);
-$color-background-two-light: hsl(0, 0%, 80%);
+$color-background-two-light: hsl(0, 0%, 90%);
 
 // Dark Mode Color Variables
 $color-heading-dark: hsl(260, 8%, 86%);
-$color-text-dark: hsl(257, 7%, 37%);
+$color-text-dark: hsl(257, 7%, 50%);
 $color-background-one-dark: hsl(0, 0%, 0%);
-$color-background-two-dark: hsl(0, 0%, 20%);
+$color-background-two-dark: hsl(0, 0%, 10%);
 
 // Social Media Color Variables
 $color-facebook-blue: hsl(221, 44%, 41%);
