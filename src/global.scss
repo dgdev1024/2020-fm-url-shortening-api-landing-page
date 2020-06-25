@@ -12,12 +12,15 @@ $font-weight-bold: 700;
 $screen-small: "(min-width: 600px)";
 $screen-medium: "(min-width: 800px)";
 $screen-large: "(min-width: 1000px)";
+$screen-extra-large: "(min-width: 1200px)";
 
 // Global Color Variables
 $color-cyan: hsl(180, 66%, 49%);
 $color-cyan-hover: hsl(180, 66%, 60%);
 $color-dark-violet: hsl(257, 27%, 26%);
+$color-dark-violet-hover: hsl(257, 27%, 45%);
 $color-red: hsl(0, 87%, 67%);
+$color-red-hover: hsl(0, 87%, 90%);
 $color-gray: hsl(0, 0%, 75%);
 $color-grayish-violet: hsl(258, 7%, 63%);
 $color-very-dark-blue: hsl(255, 11%, 22%);

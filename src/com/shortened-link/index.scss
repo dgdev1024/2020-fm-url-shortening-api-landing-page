@@ -1,0 +1,126 @@
+@import "../../global.scss";
+
+.shortened-link {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 12px 0px;
+  background-color: $color-background-one-light;
+  border-radius: 8px;
+
+  @media #{$screen-medium} {
+    grid-template-columns: auto auto 128px;
+    justify-content: stretch;
+  }
+
+  &:first-child {
+    margin-top: 0px;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &__resolving {
+    justify-self: start;
+    padding: 12px;
+  }
+
+  &__error {
+    justify-self: start;
+    padding: 12px;
+    color: $color-red;
+  }
+
+  &__resolved {
+    padding: 12px;
+    border-bottom: 1px solid $color-text-light;
+    color: $color-heading-light;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-background-two-light;
+    }
+
+    @media #{$screen-medium} {
+      align-self: start;
+      border-bottom: none;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__shortened {
+    padding: 12px;
+    color: $color-cyan;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-background-two-light;
+    }
+
+    @media #{$screen-medium} {
+      justify-self: end;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__button {
+    padding: 9px 24px;
+    font-size: 0.9em;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    background-color: $color-cyan;
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+
+    @media #{$screen-medium} {
+      justify-self: end;
+      width: 128px;
+      border-radius: 0px 8px 8px 0px;
+    }
+
+    &:hover {
+      background-color: $color-cyan-hover;
+    }
+
+    &--copied {
+      background-color: $color-dark-violet;
+
+      &:hover {
+        background-color: $color-dark-violet-hover;
+      }
+    }
+  }
+}
+
+.main--dark .shortened-link {
+  background-color: $color-background-one-dark;
+
+  &__resolved {
+    border-bottom-color: $color-text-dark;
+    color: $color-heading-dark;
+
+    &:hover {
+      background-color: $color-background-two-dark;
+    }
+
+    @media #{$screen-medium} {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__shortened:hover {
+    background-color: $color-background-two-dark;
+
+    @media #{$screen-medium} {
+      background-color: transparent;
+    }
+  }
+}

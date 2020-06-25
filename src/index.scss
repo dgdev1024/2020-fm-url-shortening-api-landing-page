@@ -14,16 +14,16 @@
   background-color: $color-background-one-light;
 
   .container {
-    width: 95%;
+    width: 97%;
     margin: 0px auto;
 
-    @media #{$screen-small} {
+    @media #{$screen-medium} {
       width: 95%;
     }
-    @media #{$screen-medium} {
+    @media #{$screen-large} {
       width: 90%;
     }
-    @media #{$screen-large} {
+    @media #{$screen-extra-large} {
       width: 85%;
     }
   }
