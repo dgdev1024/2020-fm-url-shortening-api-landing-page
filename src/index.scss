@@ -12,6 +12,7 @@
 
 .main {
   background-color: $color-background-one-light;
+  overflow-x: hidden;
 
   .container {
     width: 97%;
@@ -37,34 +38,34 @@
     line-height: 1.3em;
 
     &--large {
-      font-size: 1.25em;
+      font-size: 2em;
 
       @media #{$screen-small} {
-        font-size: 1.5em;
+        font-size: 2.25em;
       }
 
       @media #{$screen-medium} {
-        font-size: 1.75em;
+        font-size: 2.5em;
       }
 
       @media #{$screen-large} {
-        font-size: 2em;
+        font-size: 2.75em;
       }
     }
 
     &--medium {
-      font-size: 1.25em;
+      font-size: 1.5em;
 
       @media #{$screen-small} {
-        font-size: 1.25em;
+        font-size: 1.75em;
       }
 
       @media #{$screen-medium} {
-        font-size: 1.5em;
+        font-size: 2em;
       }
 
       @media #{$screen-large} {
-        font-size: 1.75em;
+        font-size: 2.25em;
       }
     }
 
@@ -72,15 +73,15 @@
       font-size: 1em;
 
       @media #{$screen-small} {
-        font-size: 1em;
+        font-size: 1.25em;
       }
 
       @media #{$screen-medium} {
-        font-size: 1em;
+        font-size: 1.5em;
       }
 
       @media #{$screen-large} {
-        font-size: 1.25em;
+        font-size: 1.75em;
       }
     }
 

@@ -6,6 +6,11 @@
   &__empty {
     padding-top: 32px;
   }
+
+  &__container {
+    position: relative;
+    top: -52px;
+  }
 }
 
 .main--dark .links {

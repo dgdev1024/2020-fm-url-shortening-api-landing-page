@@ -29,7 +29,10 @@
 
   &__input {
     grid-area: input;
+    width: 100%;
     padding: 12px;
+    background-color: $color-background-two-light;
+    color: $color-heading-light;
     border: none;
     border-radius: 8px;
 
@@ -77,5 +80,12 @@
     @media #{$screen-medium} {
       margin-top: 0px;
     }
+  }
+}
+
+.main--dark .link-form {
+  &__input {
+    background-color: $color-background-two-dark;
+    color: $color-heading-dark;
   }
 }

@@ -27,7 +27,7 @@ const StatisticsSection = () => (
               className="statistics__image"
             />
           </div>
-          <h3 className="heading heading--small heading--align-left-on-medium">
+          <h3 className="heading heading--align-left-on-medium">
             Brand Recognition
           </h3>
           <p className="text text--smaller text--align-left-on-medium">
@@ -43,7 +43,7 @@ const StatisticsSection = () => (
               className="statistics__image"
             />
           </div>
-          <h3 className="heading heading--small heading--align-left-on-medium">
+          <h3 className="heading heading--align-left-on-medium">
             Detailed Records
           </h3>
           <p className="text text--smaller text--align-left-on-medium">
@@ -59,7 +59,7 @@ const StatisticsSection = () => (
               className="statistics__image"
             />
           </div>
-          <h3 className="heading heading--small heading--align-left-on-medium">
+          <h3 className="heading heading--align-left-on-medium">
             Fully Customizable
           </h3>
           <p className="text text--smaller text--align-left-on-medium">

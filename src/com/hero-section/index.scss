@@ -1,0 +1,62 @@
+@import "../../global.scss";
+
+.hero {
+  background-color: $color-background-one-light;
+
+  &__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: "image" "caption";
+    gap: 32px;
+    padding: 96px 0px 112px;
+
+    @media #{$screen-medium} {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "caption image";
+      align-items: center;
+      gap: 48px;
+    }
+
+    @media #{$screen-large} {
+      gap: 64px;
+    }
+  }
+
+  &__image {
+    grid-area: image;
+    width: 150%;
+    max-width: 480px;
+    margin: 0px auto;
+    overflow: hidden;
+
+    @media #{$screen-medium} {
+      max-width: 800px;
+    }
+  }
+
+  &__caption {
+    grid-area: caption;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0px auto;
+
+    @media #{$screen-medium} {
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 4px !important;
+  }
+
+  &__button {
+    margin-top: 32px;
+  }
+}
+
+.main--dark .hero {
+  background-color: $color-background-one-dark;
+}

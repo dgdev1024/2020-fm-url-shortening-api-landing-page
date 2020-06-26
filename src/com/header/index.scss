@@ -1,0 +1,146 @@
+@import "../../global.scss";
+
+.header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 64px auto;
+    grid-template-areas: "logo toggle" "nav nav";
+    align-items: center;
+
+    @media #{$screen-medium} {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 96px;
+      grid-template-areas: "logo nav";
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    justify-self: start;
+    @include scale-logo-width(32px);
+
+    @media #{$screen-medium} {
+      @include scale-logo-width(36px);
+    }
+  }
+
+  &__toggle {
+    grid-area: toggle;
+    justify-self: end;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+
+    @media #{$screen-medium} {
+      display: none !important;
+    }
+  }
+
+  &__nav {
+    grid-area: nav;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    background-color: $color-very-dark-blue;
+    border-radius: 8px;
+
+    &--shown {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media #{$screen-medium} {
+      opacity: 1;
+      visibility: visible;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__nav-first,
+  &__nav-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0px auto;
+
+    @media #{$screen-medium} {
+      flex-direction: row;
+      width: auto;
+      margin: 0px;
+    }
+  }
+
+  &__nav-first {
+    border-bottom: 1px solid $color-grayish-violet;
+
+    @media #{$screen-medium} {
+      margin-left: 8px;
+      border-bottom: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    margin: 16px;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    text-decoration: none;
+    text-align: center;
+
+    @media #{$screen-medium} {
+      display: inline-block;
+      width: auto;
+      margin: 8px;
+      font-size: 0.8em;
+      color: $color-very-dark-blue;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    @media #{$screen-large} {
+      margin: 16px;
+    }
+  }
+
+  &__cta {
+    @media #{$screen-medium} {
+      margin: 8px;
+      padding: 8px 16px !important;
+      font-size: 0.8em !important;
+    }
+  }
+}
+
+.main--dark .header {
+  &__logo-svg .logo-svg__path {
+    fill: $color-heading-dark;
+  }
+
+  &__toggle {
+    color: $color-heading-dark;
+  }
+
+  &__link {
+    @media #{$screen-medium} {
+      color: $color-heading-dark;
+    }
+  }
+}
