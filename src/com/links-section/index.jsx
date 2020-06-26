@@ -57,7 +57,7 @@ const LinksSection = () => {
   };
 
   return (
-    <section className="section links">
+    <section className="section links" aria-label="Shorten Links">
       <div className="container links__container">
         <LinkForm shortenLink={shortenLink} linkError={linkError} />
         {shortLinks.length === 0 && (
